@@ -1,0 +1,125 @@
+# ============================================================
+# General-purpose .gitignore for Python / ML pet projects
+# Tracked on purpose: source (*.py, *.ipynb), small text inputs (input.txt), configs, docs.
+# ============================================================
+
+# --- Python bytecode, packaging, build artefacts ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+.eggs/
+build/
+dist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+.installed.cfg
+
+# --- Virtual environments and dependency dirs (any depth) ---
+.venv/
+venv/
+env/
+ENV/
+.env/
+.virtualenv/
+.conda/
+conda-env/
+node_modules/
+
+# --- Secrets and local config (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+.credentials.json
+credentials.json
+secrets/
+.netrc
+*.sparseimage
+
+# --- Jupyter / IPython ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+.ipython/
+profile_default/
+
+# --- Tests, coverage, linters, type checkers ---
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# --- ML artefacts: checkpoints, weights, large binaries, experiment logs ---
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.bin
+checkpoints/
+ckpt/
+runs/
+lightning_logs/
+wandb/
+mlruns/
+tensorboard/
+logs/
+*.log
+outputs/
+out/
+.cache/
+.torch/
+.huggingface/
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+*.sublime-workspace
+
+# --- OS junk ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Temporary files ---
+*.tmp
+*.bak
+*.orig
+*.rej
+.scratch/
+tmp/
